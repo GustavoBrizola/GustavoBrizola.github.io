@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Include Spring Boot's default patterns and colors -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+
+    <!-- Instructions to new logs into files -->
+   <property name="LOG_DIR" value="log"></property> <!--Root log directory-->
+    <property name="LOG_FILE" value="log"></property> <!--Filename-->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Monthly rollover with yyyy-MM format -->
+            <!-- Checks if there's a file that matches, if not, creates new file and add logs-->
+            <fileNamePattern>${LOG_DIR}/${LOG_FILE} - %d{MM.yyyy}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <!-- Log event register format -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - [%thread] %-5level %logger{45} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Specific Package Logging -->
+    <logger name="org.springframework.web" level="DEBUG" />
+</configuration>

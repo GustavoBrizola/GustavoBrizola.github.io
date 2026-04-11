@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "target": "ES2024",
+        "jsx": "react-jsx",
+        "allowImportingTsExtensions": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strict": true,
+        // This ensures to notify any error on code
+        // Why is not like this by default? 
+        "checkJs": true 
+    },
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}

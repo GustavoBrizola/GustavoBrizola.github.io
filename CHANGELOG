@@ -1,0 +1,25 @@
+April 10, 2026
+    * Log system for backend implemented
+    * major folders refurb
+    * gitignore revisions
+
+April 8, 2026
+    * Code comments added
+    * Rewrite backend code of restAPI started
+
+April 7, 2026
+    * Connection with backend and frontend stablished properly
+        - Test made in Google Chrome on localhost
+    * Known issue: MacOS Safari won't open the URL. Verify other web browsers
+        - FireFox
+        - Opera
+        - Brave
+    * Directories rearanged
+
+April 6, 2026
+    * First Git Commit
+    * Build API link
+    * Connection with frontend and backend attempt
+
+April 5, 2026
+    * Project Preparations
