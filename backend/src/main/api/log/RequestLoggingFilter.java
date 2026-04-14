@@ -40,6 +40,7 @@ public class RequestLoggingFilter extends OncePerRequestFilter
         String requestnum = request.getRequestId();
 
         // Prints on Spring Boot terminal request information, following the pattern
+        // Also usable when creating .log file
         logger.info("[ACCESS] request {}: {} {}{} from {} user-agent={} {}",
                 requestnum,        
                 method,

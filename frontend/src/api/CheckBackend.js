@@ -1,7 +1,3 @@
-/**
- * This code is called in order to check connection with backend server
- * Can be imported by other files to check
- */
 import axios from "axios";
 
 // Import from .env
@@ -9,7 +5,8 @@ import axios from "axios";
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 /**
- * Request data from backend. Useful for both 
+* Checks connection with the backend server by requesting data from multiple endpoints.
+* Can be imported by other files to verify backend connectivity.
  * 
  * Returns boolean
  * @param {boolean} alertstats Sends information to client about the connection
@@ -21,7 +18,7 @@ async function BackendCheck(alertstats)
   let data;
   try
   {
-    // All messages resqueted from backend should be the same as here
+    // All endpoint requests from backend should be the same
     response = await axios.get(`${BACKEND_URL}/api/request/verify`);
     data = `${response.data.status}: ${response.data.message}`+'\n';
 

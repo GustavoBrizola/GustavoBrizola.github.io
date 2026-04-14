@@ -1,0 +1,45 @@
+.top-bar 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    font-family: Arial, sans-serif;
+    font-size: 12;
+    position: sticky;
+    flex-direction: row;
+    border-radius:0.5cm;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-bar-links {
+    display:contents;
+    align-items: center;
+    position: relative;
+    gap: 40%;
+}
+
+.top-bar-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;;
+}
+
+.top-bar-links a:hover {
+    color: #ccc;
+}
+
+.top-bar-button
+{
+    padding: 1rem 1rem;
+    cursor: pointer;
+    background-color: #007bff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}

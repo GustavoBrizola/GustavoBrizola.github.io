@@ -14,7 +14,8 @@ import java.util.List;
 /*
     Spring Configuration Class
     --
-    Defines Security Filter chains, controling HTTP security behavior
+    Defines Security Filter chains, controlling HTTP security behavior
+
 */
 @Configuration // Marks the class as config component
 public class WebSecurityConfig 
@@ -32,7 +33,7 @@ public class WebSecurityConfig
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             // Restrict access: permit only specific public endpoints, require auth for others
             .authorizeHttpRequests(auth -> auth
-                // Determines the publc endpoints 
+                // Determines the public endpoints access
                 // SUGGESTION: CREATE A LIST OF ENDPOINT PERMITS
                 .requestMatchers("/api/public/**", "/api/request/**")
                 .permitAll() 
@@ -43,7 +44,7 @@ public class WebSecurityConfig
         return http.build();
     }
 
-    // Sets the CORS to accept request from especific port
+    // Sets CORS to accept requests from specific port
     @Bean
     public CorsConfigurationSource corsConfigurationSource() 
     {
