@@ -1,12 +1,11 @@
 import BackendCheck from './api/CheckBackend.js';
-import { renderTopBar } from './MainPageTopBar.js';
 
-// Tasks before
-BackendCheck(false).catch((err) => 
-{
-  console.error('Backend check failed:', err);
-});
+import MainPage_TopBar from './MPTopBar.js';
+
+// Tasks before everything
+BackendCheck(false);
 
 // Import from other JS's and build the site
-renderTopBar();
+// Note Actions must be placed on their respective files
+MainPage_TopBar();
 
