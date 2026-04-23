@@ -8,6 +8,8 @@ const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 * Checks connection with the backend server by requesting data from multiple endpoints.
 * Can be imported by other files to verify backend connectivity.
  * 
+ * Deprecated
+ * 
  * Returns boolean
  * @param {boolean} alertstats Sends information to client about the connection
  */
