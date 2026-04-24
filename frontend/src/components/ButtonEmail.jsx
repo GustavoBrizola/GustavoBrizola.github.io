@@ -10,7 +10,7 @@ function ButtonEmail()
             ClassName={'ProfileEmail'} 
             Href={`mailto:${ProfileData.Contact[0]}`} 
             ClassImage={'PhoneImage'} 
-            Image={'Portfolio/images/ico/LogoGmail.png'} 
+            Image={'images/ico/LogoGmail.png'} 
             VerticalDiviser={'Divider'} 
             Text={'Email'}
         />                    

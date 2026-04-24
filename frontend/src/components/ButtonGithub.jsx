@@ -13,7 +13,7 @@ function ButtonGithub()
             Target={'_blank'}
             Rel={'noopener noreferrer'}
             ClassImage={'PhoneImage'}
-            Image={'Portfolio/images/ico/LogoGithub.png'}
+            Image={'images/ico/LogoGithub.png'}
             VerticalDiviser={'Divider'}
             Text={'GitHub'}
         />

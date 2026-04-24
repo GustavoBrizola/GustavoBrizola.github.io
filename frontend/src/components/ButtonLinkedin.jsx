@@ -12,7 +12,7 @@ function ButtonLinkedin()
             Target={'_blank'}
             Rel={'noopener noreferrer'}
             ClassImage={'PhoneImage'}
-            Image={'Portfolio/images/ico/LogoLinkedin.png'}
+            Image={'images/ico/LogoLinkedin.png'}
             VerticalDiviser={'Divider'}
             Text={'LinkedIn'}
         />

@@ -12,7 +12,7 @@ function ButtonWhatsApp()
             Target={'_blank'} 
             Rel={'noopener noreferrer'} 
             ClassImage={'PhoneImage'} 
-            Image={'Portfolio/images/ico/LogoWhatsApp.png'} 
+            Image={'images/ico/LogoWhatsApp.png'} 
             VerticalDiviser={'Divider'} 
             Text={'WhatsApp'}
         />
