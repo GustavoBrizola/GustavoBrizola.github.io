@@ -6,9 +6,7 @@
 export default
 function List(props)
 {
-    const Component = props.Type;
-
-    if (!Component) return null;
+    const Component = props.Type || 'a';
 
     return (
         <Component 

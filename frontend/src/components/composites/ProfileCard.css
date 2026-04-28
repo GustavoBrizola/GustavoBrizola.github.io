@@ -38,52 +38,6 @@ body
     color: #777;
 }
 
-
-/* Profile Info */
-.ProfileInfo
-{
-    height: fit-content;
-    
-    background-color: #b1b1b1;
-    border-radius: var(--BorderRadius);
-    margin: 10px 0px;
-    padding: 1rem 2rem;
-    
-    display: flex;
-    justify-content:space-around;
-
-    font-size: 10pt;
-    font-weight: bold;
-    color: #ffffff;
-}.ProfileAge
-{  
-    width: min-content;
-    display: flex;
-    align-items: center;
-
-}.ProfileLocal a
-{ 
-    display:flex;
-    text-align: left;
-}.ProfileWork
-{
-    width: min-content;
-    display: flex;
-    align-items: center;
-}.Divider
-{
-    border-right: 1px solid #d9d9d9;
-    padding-right: 10px;
-    margin-right: 10px;
-}
-
-.HorizontalDivider
-{
-    border-radius: var(--BorderRadius);
-    background-color: #777;
-    margin: 10px;
-}
-
 .ProfileDescription
 {
     height: fit-content;

@@ -1,0 +1,41 @@
+.ListPersonalInfo
+{
+    width: fit-content;
+
+    background-color: #b1b1b1;
+    border-radius: var(--BorderRadius);
+    margin: 10px 0px;
+    align-items: center;
+    padding: 1rem 2rem;
+    
+    display: flex;
+    
+    font-size: 10pt;
+    font-weight: bold;
+    color: #ffffff;
+}
+.ListPersonalInfo_Diviser
+{
+    background-color: #d9d9d9;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    padding-left: 1px;
+    margin-left: 10px;
+    padding-right: 1px;
+    margin-right: 10px;
+}
+.ListPersonalInfo_Local
+{
+    display: grid;
+    white-space: nowrap;
+    text-align: left;
+    align-items: center;
+    padding: 0rem 1rem;
+}
+
+.ListPersonalInfo a
+{
+    flex: 1;
+}

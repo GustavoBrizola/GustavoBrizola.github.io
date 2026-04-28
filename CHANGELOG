@@ -1,3 +1,6 @@
+**April 28, 2026**
+- Personal Info section from ProfileCard abstracted into own file
+
 **April 25, 2026**
 - Frontend src/ directory rearrangement. Check FRONTEND-MANUAL.MD for changes
 - Changelog format improvements

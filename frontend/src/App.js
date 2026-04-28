@@ -7,8 +7,9 @@ function App()
 {
   return (
     <div className='App'>
-       <header className='App-header'>
-          <ProfileCard/>
+      <header className='App-header'>
+        
+        <ProfileCard/>
       </header>
     </div>
   );

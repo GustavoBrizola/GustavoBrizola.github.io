@@ -23,6 +23,9 @@ import                              '../elements/buttons/ButtonGithub.css';
 import                              '../elements/buttons/ButtonLinkedin.css';
 import                              '../elements/buttons/ButtonWhatsApp.css';
 
+import ListPersonalInfo from '../elements/list/ListPersonalInfo';
+import '../elements/list/ListPersonalInfo.css';
+
 /**
  * Structural profile
  * 
@@ -38,21 +41,7 @@ function ProfileCard()
                 <div className='ProfileName'>{TruncateText(ProfileData.Name, 50)}</div>
                 <div className='ProfilePhrase'>{TruncateText(ProfileData.Phrase, 30)}</div>
             </div>
-            <div className='ProfileInfo'>
-                <div className='ProfileAge'>
-                    <List Type={'a'} Info={ProfileData.Age}/>
-                </div>
-                <div className='Divider'/>
-                <div className='ProfileLocal'>
-                    <List Type={'a'} Info={ProfileData.Local[0]}/>
-                    <List Type={'a'} Info={ProfileData.Local[1]}/>
-                    <List Type={'a'} Info={ProfileData.Local[2]}/>
-                </div>
-                <div className='Divider'/>
-                <div className='ProfileWork'>
-                    <List Type={'a'} Info={ProfileData.Work}/>
-                </div>
-            </div>
+            <ListPersonalInfo/>
             <div className='ProfileDescription'>{TruncateText(ProfileData.Description, 300)}</div>            
             <hr className='HorizontalDiviser'/>
             <div className='ProfileContacts'>
