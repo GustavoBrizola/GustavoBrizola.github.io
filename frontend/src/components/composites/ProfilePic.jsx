@@ -13,12 +13,12 @@ function ProfilePic()
     <div className='ProfilePic'>
       <img className='ProfilePicWallpaper'
         src='/images/photos/Wallpaper.jpg'
-        alt=""
+        alt='Wallpaper'
       />
       <div className='ProfilePicContent'>
         <img className='ProfilePicPhoto'
           src='/images/photos/ProfilePicPhoto.png'
-          alt={`${ProfileData.Name}'s profile photo`}
+          alt='Pic'
         />
         {ProfileData.Name}
         <ListPersonalInfo/>
