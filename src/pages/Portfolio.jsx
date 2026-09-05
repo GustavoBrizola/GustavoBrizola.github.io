@@ -6,6 +6,8 @@ import { pageMap } from "jsx/portfolio/SectionList";
 
 import burguerIcon from '/svg/ui/lines_white.svg';
 
+import { BreakScroll } from "js/BreakScroll";
+
 import { DevCredits, BuildVersion, FooterLinks } from "jsx/portfolio/Footer";
 import { ProfileDisplay } from "jsx/portfolio/NavigationBar";
 import { SectionDisplay, ContentDisplay } from "jsx/portfolio/ContentDisplay";
@@ -15,34 +17,26 @@ function Portfolio() {
     const [activeSection, setActiveSection] = useState(pageMap.home.id);
     const [isBurguerMenu, setBurguerMenu] = useState(false);
 
-    useEffect(() => {
-        const previousOverflowY = document.body.style.overflowY;
-        if (isBurguerMenu) {
-            document.body.style.overflowY = 'hidden';
-        }
-        return () => {
-            document.body.style.overflowY = previousOverflowY;
-        };
-    }, [isBurguerMenu]);
+    // UseEffect
+    BreakScroll(isBurguerMenu);
 
     return (
-        <main className="portfolio" style={{}}>
+        <main className="portfolio" style={{}}> 
 
             {isBurguerMenu &&
-                <menu className="ContainerMenu">
-                    <div style={{backgroundColor:'black', opacity:'0.7'}} onClick={() => setBurguerMenu(!isBurguerMenu)}/>
+                <menu className="containerMenu">
+                    <canvas style={{backgroundColor:'black', opacity:'0.7'}} onClick={() => setBurguerMenu(!isBurguerMenu)}/>
                     <nav>
-
+                        <p>Nothing Here</p>
                     </nav>
                 </menu>
             }
             <nav className="navigationBar">
-
                 <ProfileDisplay/>
                 <div className='section'>
                     {/* Temporary */}
-                    <SectionDisplay SetActiveSection={setActiveSection} PageMap={pageMap}/>
-                    <a onClick={() => setBurguerMenu(!isBurguerMenu)}>
+                    <SectionDisplay SetActiveSection={setActiveSection} SetBurguerMenu={setBurguerMenu} PageMap={pageMap}/>
+                    <a onClick={() => setBurguerMenu(!isBurguerMenu)} style={{borderLeft: 'var(--border) solid var(--color_borders)'}}>
                         <img src={burguerIcon} alt={null} style={{width: '18px'}}/>
                     </a>
                 </div>

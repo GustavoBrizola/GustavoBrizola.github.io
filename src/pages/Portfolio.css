@@ -31,39 +31,42 @@ body {
     from { opacity: 0; }
     to { opacity: 0.7; }
 }
-.ContainerMenu {
+.containerMenu {
     display: flex;
     height: 100%;
     width: 100%;
     position: fixed;
     z-index: 999;
     right: 0;
-    top: 0;
-    
-        div {
-            position: fixed;
-            height: 100%;
-            width: 100%;
-        }
 
-        nav {
-            display: flex;
-            position: fixed;
-            height: 100%;
-            width: 400px;
-            right: 0;
-            background-color: var(--color_objects);
-            border-left: var(--border) solid var(--color_borders);
-            justify-content: center;
-            
-            /* Mobile settings */
-            @media (max-width: 1080px) {
-                width: 100%;
-                height: fit-content;
-                border-bottom: var(--border) solid var(--color_borders);
-            }
+    nav {
+        display: flex;
+        /* position: relative; */
+        position: fixed;
+        height: 100%;
+        width: 300px;
+        right: 0;
+        background-color: var(--color_objects);
+        border-left: var(--border) solid var(--color_borders);
+        justify-content: center;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        
+        overflow-y: auto;
+        
+        padding: 100px 50px 0px 50px;
+        
+        /* Mobile settings */
+        @media (max-width: 1080px) {
+            width: 100%;
+            padding-top: 200px;
+            padding-bottom: 50px;
+            height: fit-content;
+            border-left: 0;
+            border-bottom: var(--border) solid var(--color_borders);
         }
     }
+}
 
 .navigationBar {
     --navigationBar_height: 80px;
@@ -130,11 +133,13 @@ body {
             overflow-y: hidden;
             overflow-x: scroll;
             scrollbar-width: none;
-            justify-content: safe center;
+            /* justify-content: safe center; */
         }
         
         a {
             position: sticky;
+            
+
             color: var(--font_color_white);
             text-decoration: none;
             font-weight: bold;
