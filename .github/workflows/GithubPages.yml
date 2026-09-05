@@ -26,8 +26,9 @@ jobs:
   # Single deploy job since we're just deploying
   deploy:
     environment:
-      name: production
-      url: ${{ steps.deployment.outputs.page_url }}
+      on:
+        name: production
+        url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
